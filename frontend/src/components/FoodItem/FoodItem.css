@@ -10,7 +10,8 @@
 .food-item-image{
     width: 100%;
     border-radius: 15px 15px 0px 0px;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+    display: block;
 }
 
 .food-item-info{
@@ -48,6 +49,7 @@
 .food-item-img-container{
     position: relative;
     overflow: hidden;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .food-item-img-container .add{
@@ -57,6 +59,7 @@
     right: 15px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
 }
 
 .food-item-counter{
@@ -65,23 +68,36 @@
     right: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
+    justify-content: center;
+    gap: 6px;
     padding: 6px 10px;
     border-radius: 50px;
     background-color: white;
-    min-width: 90px;
+    width: 100px;
+    z-index: 10;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .food-item-counter img{
-    width: 30px;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+    object-fit: contain;
 }
 
 .food-item-counter p{
-    min-width: 24px;
+    width: 28px;
     text-align: center;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1;
 }
 
+/* Task 2: Zoom-in effect on hover for menu images */
+.food-item:hover .food-item-image,
 .food-item-img-container:hover .food-item-image{
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
