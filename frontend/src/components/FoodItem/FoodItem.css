@@ -12,6 +12,7 @@
     border-radius: 15px 15px 0px 0px;
     transition: transform 0.3s ease;
     display: block;
+    clip-path: inset(0 round 15px 15px 0px 0px);
 }
 
 .food-item-info{
@@ -48,7 +49,6 @@
 
 .food-item-img-container{
     position: relative;
-    overflow: hidden;
     border-radius: 15px 15px 0px 0px;
 }
 
@@ -60,6 +60,12 @@
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.food-item-img-container:hover .add{
+    transform: scale(1.1);
 }
 
 .food-item-counter{
@@ -97,7 +103,6 @@
 }
 
 /* Task 2: Zoom-in effect on hover for menu images */
-.food-item:hover .food-item-image,
 .food-item-img-container:hover .food-item-image{
     transform: scale(1.08);
 }
